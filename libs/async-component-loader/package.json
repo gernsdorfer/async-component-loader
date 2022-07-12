@@ -1,5 +1,5 @@
 {
-  "name": "@gernsdorfer/lazy-component",
+  "name": "@gernsdorfer/async-component-loader",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": ">= 14.0.0",
