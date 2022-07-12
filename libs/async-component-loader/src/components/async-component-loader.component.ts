@@ -92,6 +92,7 @@ export class AsyncComponentLoaderComponent<LAZY_COMPONENT extends IComponent> im
   }
 
   private setInputs(componentRef: ComponentRef<LAZY_COMPONENT> | undefined = this.componentRef) {
+    if(!this._inputs) return;
     Object.keys(this._inputs).forEach((key) => {
       if (!componentRef?.instance) return;
       (componentRef.instance[key] as LAZY_COMPONENT[typeof key]) = this._inputs[key] as LAZY_COMPONENT[typeof key];

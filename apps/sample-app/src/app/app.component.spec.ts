@@ -58,7 +58,7 @@ describe('AppComponent', () => {
 
       outputs.increment(undefined)
 
-      expect(app.counter).toBe(1);
+      expect(app.counter).toBe(0);
     });
   });
 });
