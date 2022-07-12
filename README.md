@@ -46,7 +46,6 @@ import {AsyncComponentLoaderComponent, LazyComponentCreator} from "@gernsdorfer/
 })
 ```
 
-
 ```ts
 @Component({
   selector: 'my-component',
@@ -59,10 +58,11 @@ import {AsyncComponentLoaderComponent, LazyComponentCreator} from "@gernsdorfer/
   `,
 })
 class MyComponent {
+  counter = 0;
   counterComponent = new LazyComponentCreator<CounterComponent>({
       component: async () => (await import('./components/counter/counter.component')).CounterComponent,
       outputs: {
-        increment: (newCount = 0 ) => this.counter = newCount
+        increment: (newCount = 0) => this.counter = newCount
       }
     }
   )
