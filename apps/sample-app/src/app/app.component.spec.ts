@@ -3,7 +3,6 @@ import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {CounterComponent} from "./components/counter/counter.component";
-import {LazyComponentCreator} from "@gernsdorfer/async-component-loader";
 
 describe('AppComponent', () => {
   let app: AppComponent;
@@ -32,8 +31,8 @@ describe('AppComponent', () => {
   describe('counterComponent', () => {
     const getOutputs = (outputs: AppComponent['counterComponent']['outputs']) => {
       return {
-        increment: (_value?: number) => {
-          throw 'increment is not defined'
+        increment: (value?: number) => {
+          throw `increment with value ${value} is not defined`
         },
         ...outputs
       };
