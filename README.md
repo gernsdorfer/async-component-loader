@@ -47,10 +47,6 @@ import {AsyncComponentLoaderComponent, LazyComponentCreator} from "@gernsdorfer/
 
 
 ```ts
-export interface MyState {
-  counter: number;
-}
-
 @Component({
   selector: 'my-component',
   template: `
