@@ -10,7 +10,7 @@ module.exports = function (config) {
     ...baseConfig,
     coverageReporter: {
       ...baseConfig.coverageReporter,
-      dir: join(__dirname, '../../coverage/libs/store'),
+      dir: join(__dirname, '../../coverage/libs/async-component-loader'),
     },
   });
 };
