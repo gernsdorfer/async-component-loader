@@ -1,0 +1,51 @@
+name: Test, Lint, Build, e2e
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout [master]
+        with:
+          fetch-depth: 0
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: yarn
+      - run: yarn run affected:build --all --parallel=3
+      - run: yarn run affected:lint --all --parallel=2
+      - run: yarn run affected:test --all --parallel=2
+      - run: yarn run affected:e2e --all --record
+        env:
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+  pr:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'master'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: yarn
+      - run: yarn run affected:build --parallel=3
+      - run: yarn run affected:lint --parallel=2
+      - run: yarn run affected:test --parallel=2
+      - run: yarn run affected:e2e --record
+        env:
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}

@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/async-component-loader/src",
+  "prefix": "async-component-loader",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/async-component-loader"],
+      "options": {
+        "project": "libs/async-component-loader/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/async-component-loader/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/async-component-loader/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "codeCoverage": true,
+        "main": "libs/async-component-loader/src/test.ts",
+        "tsConfig": "libs/async-component-loader/tsconfig.spec.json",
+        "karmaConfig": "libs/async-component-loader/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/async-component-loader/src/**/*.ts",
+          "libs/async-component-loader/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

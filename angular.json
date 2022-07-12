@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "defaultProject": "sample-app",
+  "projects": {
+    "sample-app": "apps/sample-app",
+    "sample-app-e2e": "apps/sample-app-e2e",
+    "async-component-loader": "libs/async-component-loader"
+  }
+}
