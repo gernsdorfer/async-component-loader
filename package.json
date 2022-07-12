@@ -1,6 +1,6 @@
 {
   "name": "async-component-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "affected:build": "nx affected --target=build",
