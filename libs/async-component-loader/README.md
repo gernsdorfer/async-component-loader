@@ -1,13 +1,13 @@
+# Async Component Loader
+
+> A small Angular Library to load standalone components asynchronously
+
 [![Test, Lint, Build](https://github.com/gernsdorfer/async-component-loader/actions/workflows/ci.yml/badge.svg)]()
 [![Publish to NPM](https://github.com/gernsdorfer/async-component-loader/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/gernsdorfer/async-component-loader/actions/workflows/npm-publish.yml)
 [![styled with](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 [![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)]()
 [![async-component-loader](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/v5fbpd/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/v5fbpd/runs)
-
-# Async Component Loader
-
-> A small Angular Library to load standalone components asynchronously
 
 
 <hr />
