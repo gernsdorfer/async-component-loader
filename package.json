@@ -12,7 +12,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build:release": "nx run store:build:production",
+    "build:release": "nx run async-component-loader:build:production",
     "release": "release-it"
   },
   "private": true,
