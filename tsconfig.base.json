@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gernsdorfer/async-component-loader": ["libs/async-component-loader/src/index.ts"]
+      "@gernsdorfer/async-component-loader": [
+        "libs/async-component-loader/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

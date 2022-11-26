@@ -1,4 +1,6 @@
 {
+  "name": "sample-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/sample-app/src",
   "prefix": "sample-app",
@@ -16,9 +18,7 @@
           "apps/sample-app/src/favicon.ico",
           "apps/sample-app/src/assets"
         ],
-        "styles": [
-          "apps/sample-app/src/styles.css"
-        ],
+        "styles": ["apps/sample-app/src/styles.css"],
         "scripts": []
       },
       "configurations": {
