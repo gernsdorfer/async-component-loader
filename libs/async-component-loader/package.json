@@ -1,6 +1,6 @@
 {
   "name": "@gernsdorfer/async-component-loader",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": ">= 14.0.0",
     "@angular/core": ">= 14.0.0"
