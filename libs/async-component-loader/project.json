@@ -1,11 +1,13 @@
 {
+  "name": "async-component-loader",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/async-component-loader/src",
   "prefix": "async-component-loader",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/async-component-loader"],
+      "outputs": ["{workspaceRoot}/dist/libs/async-component-loader"],
       "options": {
         "project": "libs/async-component-loader/ng-package.json"
       },
